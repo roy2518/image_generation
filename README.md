@@ -16,8 +16,8 @@ A genetic algorithm is a search-based optimization technique, inspired by the id
 
 3. Our population then produces 'offspring'. There are two important processes that occur during this phase:crossing over and mutations. 
 
-  -During crossing over, the offspring inherits properties from both parents. 
+During crossing over, the offspring inherits properties from both parents. 
   
-  -In a mutation, there is a likelihood that these properties are slightly altered.
+In a mutation, there is a likelihood that these properties are slightly altered.
 
 4. The offspring become the new 'population', and we continuously repeat this process, going back to step 2.
