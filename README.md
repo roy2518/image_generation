@@ -1,6 +1,6 @@
 # image_generation
 
-Uses a genetic algorithm to construct a given image using only circles.
+Uses a genetic algorithm to reconstruct a given image using circles.
 
 Try me out at  https://roy2518.github.io/image_generation/ :)>
 
