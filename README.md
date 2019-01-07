@@ -8,7 +8,7 @@ Try me out at  https://roy2518.github.io/image_generation/ :)>
 
 # How It Works
 
-A genetic algorithm is a search-based optimization technique, inspired by the idea of natural selection.
+A genetic algorithm is a search-based optimization technique, based upon the idea of natural selection.
 
 1. We begin by randomly initializing a set of candidate solutions. This constitutes our 'population'.
 
