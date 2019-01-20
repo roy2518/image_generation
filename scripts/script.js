@@ -64,10 +64,10 @@ var ctx = genetic_canvas.getContext("2d");
 
 var dummy_ctx = document.getElementById("dummy").getContext("2d");
 
-var numCircles = 125;
+var numCircles = 200;
 var gene_length = 7;
-var mutate_chance = 0.01;
-var cutoff = 0.15;
+var mutate_chance = 0.02;
+var cutoff = 0.2;
 var pop_size = 50;
 
 //Represents our population
@@ -163,8 +163,9 @@ var myClock = null;
 			//Crossover
 			for(var i = 0; i < mother.dna.length; i++)
 			{
-				var gene;
-				gene = (Math.random() < 0.5) ? mother.dna : father.dna;
+				//More likely to inherit from parent that is more fit
+				var threshold = mother.fitness / (mother.fitness + father.fitness);
+				var gene = (Math.random() < threshold) ? mother.dna : father.dna;
 
 				//Mutations
 				var allele = gene[i];
@@ -201,27 +202,27 @@ var myClock = null;
 			{
 				var X = Math.random();
 				//Make sure not off the screen
-				if(X < 0.08)
+				if(X < 0.05)
 				{
-					X = 0.08;
+					X = 0.05;
 				}
-				if(X > 0.92)
+				if(X > 0.95)
 				{
-					X = 0.92;
+					X = 0.95;
 				}
 				//Make sure not off the screen
 				var Y = Math.random();
-				if(Y < 0.08)
+				if(Y < 0.05)
 				{
-					Y = 0.08;
+					Y = 0.05;
 				}
-				if(Y > 0.92)
+				if(Y > 0.95)
 				{
-					Y = 0.92;
+					Y = 0.95;
 				}
 				this.dna.push(X);
 				this.dna.push(Y);
-				this.dna.push(Math.random() * 0.5); //Radius
+				this.dna.push(Math.random() * 0.35); //Radius
 				this.dna.push(Math.random()); //R
 				this.dna.push(Math.random()); //G
 				this.dna.push(Math.random()); //B
@@ -245,4 +246,4 @@ var myClock = null;
 		this.fitness = 100 / this.fitness;
 
 		return [this.dna, this.fitness];
-	}
+}
