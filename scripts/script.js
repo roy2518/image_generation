@@ -171,7 +171,7 @@ var myClock = null;
 				var allele = gene[i];
 				if(Math.random() < mutate_chance)
 				{
-					var delta = Math.random() * .1 * 2 - .1;
+					var delta = Math.random() * .15 * 2 - .15;
 					if(Math.random() < 0.5)
 					{
 						allele -= delta;
